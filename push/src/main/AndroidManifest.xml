@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.umeng.message">
+
+    <!--  移除权限可通过如下方法  -->
+    <!--    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"-->
+    <!--        tools:node="remove"/>-->
+    <!--    <uses-permission-->
+    <!--        android:name="android.permission.READ_PHONE_STATE"-->
+    <!--        tools:node="remove" />-->
+    <!--    <uses-permission-->
+    <!--        android:name="android.permission.BROADCAST_PACKAGE_ADDED"-->
+    <!--        tools:node="remove" />-->
+    <!--    <uses-permission-->
+    <!--        android:name="android.permission.BROADCAST_PACKAGE_CHANGED"-->
+    <!--        tools:node="remove" />-->
+    <!--    <uses-permission-->
+    <!--        android:name="android.permission.BROADCAST_PACKAGE_INSTALL"-->
+    <!--        tools:node="remove" />-->
+    <!--    <uses-permission-->
+    <!--        android:name="android.permission.BROADCAST_PACKAGE_REPLACED"-->
+    <!--        tools:node="remove" />-->
+    <!--    <uses-permission-->
+    <!--        android:name="android.permission.GET_TASKS"-->
+    <!--        tools:node="remove" />-->
+    <!--    <uses-permission-->
+    <!--        android:name="android.permission.RECEIVE_BOOT_COMPLETED"-->
+    <!--        tools:node="remove" />-->
+
+    <application>
+        <!-- 关闭自启动 Start -->
+<!--        <receiver android:name="com.taobao.accs.EventReceiver">-->
+<!--            &lt;!&ndash;低版本机型自启动相关可删除&ndash;&gt;-->
+<!--            <intent-filter tools:node="remove">-->
+<!--                <action android:name="android.intent.action.BOOT_COMPLETED" />-->
+<!--            </intent-filter>-->
+<!--            <intent-filter tools:node="remove">-->
+<!--                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />-->
+<!--            </intent-filter>-->
+<!--            <intent-filter tools:node="remove">-->
+<!--                <action android:name="android.intent.action.PACKAGE_REMOVED" />-->
+<!--                <data android:scheme="package" />-->
+<!--            </intent-filter>-->
+<!--        </receiver>-->
+<!--        <receiver android:name="com.taobao.agoo.AgooCommondReceiver">-->
+<!--            &lt;!&ndash;低版本机型自启动相关可删除&ndash;&gt;-->
+<!--            <intent-filter tools:node="remove">-->
+<!--                <action android:name="android.intent.action.PACKAGE_REMOVED" />-->
+<!--                <data android:scheme="package" />-->
+<!--            </intent-filter>-->
+<!--        </receiver>-->
+        <!-- 关闭自启动 End -->
+
+        <!-- 关闭Service拉活功能，将所有推送相关的Service和BroadcastReceiver组件设置为android:exported="false"即可-->
+        <!-- U-Push关闭Service拉活功能 Start -->
+        <!--        <service-->
+        <!--            android:name="com.taobao.accs.ChannelService"-->
+        <!--            android:exported="false"-->
+        <!--            tools:replace="android:exported" />-->
+
+        <!--        <service-->
+        <!--            android:name="com.taobao.accs.data.MsgDistributeService"-->
+        <!--            android:exported="false"-->
+        <!--            tools:replace="android:exported" />-->
+
+        <!--        <receiver-->
+        <!--            android:name="com.taobao.accs.EventReceiver"-->
+        <!--            android:exported="false"-->
+        <!--            tools:replace="android:exported" />-->
+
+        <!--        <receiver-->
+        <!--            android:name="com.taobao.accs.ServiceReceiver"-->
+        <!--            android:exported="false"-->
+        <!--            tools:replace="android:exported" />-->
+
+        <!--        <service-->
+        <!--            android:name="org.android.agoo.accs.AgooService"-->
+        <!--            android:exported="false"-->
+        <!--            tools:replace="android:exported" />-->
+        <!--        <service-->
+        <!--            android:name="com.umeng.message.UmengIntentService"-->
+        <!--            android:exported="false"-->
+        <!--            tools:replace="android:exported" />-->
+        <!--        <service-->
+        <!--            android:name="com.umeng.message.XiaomiIntentService"-->
+        <!--            android:exported="false"-->
+        <!--            tools:replace="android:exported" />-->
+
+        <!--        <receiver-->
+        <!--            android:name="com.taobao.agoo.AgooCommondReceiver"-->
+        <!--            android:exported="false"-->
+        <!--            tools:replace="android:exported" />-->
+        <!--        <service-->
+        <!--            android:name="com.umeng.message.UmengMessageIntentReceiverService"-->
+        <!--            android:exported="false"-->
+        <!--            tools:replace="android:exported" />-->
+        <!-- U-Push关闭Service拉活功能 End -->
+    </application>
+</manifest>

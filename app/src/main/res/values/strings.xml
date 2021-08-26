@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">友盟推送示例</string>
+    <string name="agreement_title">隐私政策授权</string>
+    <string name="agreement_msg">隐私政策说明…</string>
+    <string name="agreement_ok">同意</string>
+    <string name="agreement_cancel">拒绝</string>
+</resources>
